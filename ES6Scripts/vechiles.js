@@ -65,32 +65,46 @@ let vehicles = [
     }
    ];
   
-// Which vehicles are RED?
+// // Which vehicles are RED?
 
-const redCars = vehicles.filter((cars) => cars.color === "Red");
-const results1 = redCars.map((cars) => cars.type);
+// const redCars = vehicles.filter((cars) => cars.color === "Red");
+// const results1 = redCars.map((cars) => cars.type);
 
-console.log(results1)
-// Which vehicles have registrations that are expired?
+// console.log(results1)
+// // Which vehicles have registrations that are expired?
 
-let currentDate = new Date();
+// let currentDate = new Date();
 
-const expired = vehicles.filter((vehicle) => vehicle.registrationExpires < currentDate);
+// const expired = vehicles.filter((vehicle) => vehicle.registrationExpires < currentDate);
 
-const results2 = expired.map((vehicle) => vehicle.type);
+// const results2 = expired.map((vehicle) => vehicle.type);
 
-console.log(`These vehicles are expired: ${results2}`);
+// console.log(`These vehicles are expired: ${results2}`);
 
-// Which vehicles that hold at least 6 people?
+// // Which vehicles that hold at least 6 people?
 
-const holdsEnough = vehicles.filter((vehicle) => vehicle.capacity >= 6);
-const results3 = holdsEnough.map((vehicle) => vehicle.type);
+// const holdsEnough = vehicles.filter((vehicle) => vehicle.capacity >= 6);
+// const results3 = holdsEnough.map((vehicle) => vehicle.type);
 
-console.log(`These vechiles can hold up to more than 6 ${results3}`)
+// console.log(`These vechiles can hold up to more than 6 ${results3}`)
 
-// Which vehicles have license plates that end with "222"?
+// // Which vehicles have license plates that end with "222"?
 
-const endsin222 = vehicles.filter((vehicle) => vehicle.licenseNo.indexOf("222") !== -1)
-const results4 = endsin222.map((vehicle) => vehicle.type);
+// const endsin222 = vehicles.filter((vehicle) => vehicle.licenseNo.indexOf("222") !== -1)
+// const results4 = endsin222.map((vehicle) => vehicle.type);
 
-console.log(`These vechiles license ends in 222 ${results4}`)
+// console.log(`These vechiles license ends in 222 ${results4}`)
+
+
+
+for(let vehicle of vehicles){
+
+    // console.log(vehicle.color)
+    // console.log(vehicle['color'])
+
+    for(let field in vehicle){
+        console.log(field)
+    console.log(vehicle[field])
+    }
+    
+}
