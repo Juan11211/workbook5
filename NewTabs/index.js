@@ -12,17 +12,15 @@ window.onload = function() {
 };
 
 function googleBtnClicked() {
-    const newWindow = window.open('images.html', '_self'); // '_self' targets the current window/tab.
-    if (newWindow) {
-      // Close the current window if the new window opened successfully.
-      window.close();
-    }
+  window.open("https://www.w3schools.com/js/")
 }
 
 function w3schoolsClicked(){
     window.open("https://www.w3schools.com/js/");
 }
 
-function imagesBtnClicked(){
-    window.open("images.html");
+function imagesBtnClicked() {
+  window.location.href = "images.html";
 }
+
+
